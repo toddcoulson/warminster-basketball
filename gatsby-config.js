@@ -8,6 +8,7 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
+  pathPrefix:"/warminster-basketball",
   plugins: ['gatsby-transformer-remark', {
     resolve: `gatsby-source-filesystem`,
     options: {
