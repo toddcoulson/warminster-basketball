@@ -5,10 +5,10 @@ export default function Navbar(){
   return (
     <nav>
       <div className="links" >
-        <Link to="/announcements">Announcements</Link>
-        <Link to="/information">Information</Link>
-        <Link to="/registration">Registration</Link>
-        <Link to="/clearances">Clearances</Link>
+        <Link activeClassName="active" to="/announcements">Announcements</Link>
+        <Link activeClassName="active" to="/information">Information</Link>
+        <Link activeClassName="active" to="/registration">Registration</Link>
+        <Link activeClassName="active" to="/clearances">Clearances</Link>
       </div>
     </nav>
   )

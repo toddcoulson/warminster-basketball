@@ -1,8 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Playfair+Display&family=Poppins:wght@300&family=Racing+Sans+One&display=swap');
+:root{
+  --clr-neutral-100: hsla(0, 0%, 100%, 1);
+  --clr-primary-800: hsla(229, 47%, 17%, 1);
+
+  --ff-head: "Racing Sans One", cursive;
+  --ff-body: "Playfair Display", sans-serif;
+
+}
+
 * {
   margin:0;
   padding: 0;
   text-decoration: none;
   color: white;
+  
+}
+
+button{
+  background-color: coral;
+  margin: .7rem;
+  padding: .7rem;
+  border-radius: 5px;
+}
+button:hover{
+  cursor: pointer;
 }
 
 html, body {
@@ -13,9 +34,21 @@ body {
   background: radial-gradient(at top left, rgba(26, 155, 225, 1) 0%, rgb(2, 66, 100) 100%);
   background-repeat: no-repeat;
 }
+
+
 p{
   margin: 16px auto;
-  line-height: 1.5rem; 
+  line-height: 1.5rem;
+  font-family: 'Alata', sans-serif; 
+}
+h1, h3{
+  font-family: var(--ff-head);
+}
+h1{
+  font-size: 1.5rem;
+}
+h3{
+  font-size: 1rem;
 }
 
 .layout{
@@ -24,28 +57,36 @@ p{
 }
 
 nav{
+  font-family: var(--ff-head);
+  top: 0;
+  left: 0;
+  position: fixed;
   border: 1px solid red;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 40px auto;
-  
+  background-color:coral;
+  margin: auto;
+  width: 100vw;
 }
 nav .links{
-  display: inline-block;
-  text-align: right;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 nav a{
-  display: inline-block;
-  margin-left: 20px;
-  font-weight: 400;
+  place-self: center;
   padding-bottom: 8px;
   border-bottom: 3px solid transparent;
 }
-nav a:hover{
-  border-color: white;
+nav a:hover, nav a:active{
+  border-bottom: antiquewhite;
+}
+.active{
+  color: cornflowerblue; 
+  border-bottom: antiquewhite;
 }
 footer p{
   text-align: center;
   color: #bbb;
   margin: 40px auto;
+}
+.content{
+  margin-top: 40px;
 }

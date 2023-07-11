@@ -8,5 +8,11 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  plugins: [],
+  plugins: ['gatsby-transformer-remark', {
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      name: 'content',
+      path: `${__dirname}/src/content`
+    },
+  },],
 }
