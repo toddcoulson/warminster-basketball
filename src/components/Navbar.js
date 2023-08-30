@@ -1,6 +1,6 @@
 import {Link} from 'gatsby'
 import React, {useState} from 'react'
-
+import { StaticImage } from "gatsby-plugin-image"
 //import logo from "../images/wbaLogo.png";
 
 
@@ -10,7 +10,15 @@ export default function Navbar(){
 
   return (
     <nav>
-    <img className="logo" src='/wbaLogo.png'/>
+    <StaticImage
+        className="logo"
+        src="../images/wbaLogo.png"
+        alt="Warminster Basketball logo"
+        placeholder="blurred"
+        layout="fixed"
+        width={200}
+        aspectRatio={1/1}
+      />
       <div className={`links ${toggleBurger? ' active' : ''}`}>
       
         <Link activeClassName="active" to="/announcements">Announcements</Link>
