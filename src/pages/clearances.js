@@ -6,7 +6,7 @@ export default function Clearances({data}) {
   return <>
     <Layout>
       <div
-        dangerouslySetInnerHTML={{ __html: data.allMarkdownRemark.nodes[3].html }}
+        dangerouslySetInnerHTML={{ __html: data.allMarkdownRemark.nodes[1].html }}
       />
     </Layout>
   </>
