@@ -177,6 +177,6 @@ footer p{
 .logo{
   max-width: 8rem;
   max-height: 8rem;
-  position: absolute;
+  position: absolute !important;
 
 }
