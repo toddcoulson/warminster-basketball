@@ -10,7 +10,7 @@ export default function announcements({data}) {
   return (<>
     <LayoutNoFooter>
     <div className='sponsorGrid'>
-      <a href='https://www.manta.com/c/mhbtr5c/benton-mechanical-solution-llc' taget='_blank'> 
+      <a taget='_blank' href='https://www.manta.com/c/mhbtr5c/benton-mechanical-solution-llc'> 
         <StaticImage
             src="../sponsors/BentonMechanical.jpg"
             alt="Benton Mechanical"
@@ -20,7 +20,7 @@ export default function announcements({data}) {
             width={200}
           />
       </a>
-      <a href='http://www.ftsflooring.com/' taget='_blank'> 
+      <a taget='_blank' href='http://www.ftsflooring.com/'> 
         <StaticImage
           src="../sponsors/FTSFlooring.jpg"
           alt="FTS Flooring"
@@ -30,7 +30,7 @@ export default function announcements({data}) {
           width={200}
         />
       </a>
-      <a href='https://www.facebook.com/jandjautoandtruckrepairs/' taget='_blank'> 
+      <a taget='_blank' href='https://www.facebook.com/jandjautoandtruckrepairs/'> 
         <StaticImage
           src="../sponsors/JJAutoAndTruck.jpg"
           alt="JJ Auto And Truck"
@@ -40,7 +40,7 @@ export default function announcements({data}) {
           width={200}
         />
       </a>
-      <a href='https://www.facebook.com/pages/category/Machine-Shop/JML-Machine-260136757747047/' taget='_blank'>
+      <a taget='_blank' href='https://www.facebook.com/pages/category/Machine-Shop/JML-Machine-260136757747047/'>
       <StaticImage
         src="../sponsors/JMLMachining.jpg"
         alt="JML Machining"
@@ -50,7 +50,7 @@ export default function announcements({data}) {
         width={200}
       />
       </a>
-      <a href='https://www.facebook.com/pages/Johnson-M-Sons/158828084149523' taget='_blank'>
+      <a taget='_blank' href='https://www.facebook.com/pages/Johnson-M-Sons/158828084149523'>
       <StaticImage
         src="../sponsors/JohnsonSons.jpg"
         alt="Johnson Sons"
@@ -60,7 +60,7 @@ export default function announcements({data}) {
         width={200}
       />
       </a>
-      <a href='https://www.legacybuxmontrealestate.com/' taget='_blank'>
+      <a taget='_blank' href='https://www.legacybuxmontrealestate.com/'>
       <StaticImage
         src="../sponsors/LegacyBuxmont.jpg"
         alt="Legacy Buxmont"
@@ -70,7 +70,7 @@ export default function announcements({data}) {
         width={200}
       />
       </a>
-      <a href='https://www.mikesyorkstreetbarandgrill.com/' taget='_blank'>
+      <a taget='_blank' href='https://www.mikesyorkstreetbarandgrill.com/'>
       <StaticImage
         src="../sponsors/MikesBnG.jpg"
         alt="Mikes Bar and Grill"
@@ -79,7 +79,7 @@ export default function announcements({data}) {
         aspectRatio={172/102}
         width={200}
       /></a>
-      <a href='https://www.facebook.com/pages/category/Deli/Nicks-Deli-172974539485956/' taget='_blank'>
+      <a taget='_blank' href='https://www.facebook.com/pages/category/Deli/Nicks-Deli-172974539485956/'>
       <StaticImage
         src="../sponsors/NicksDeli.jpg"
         alt="Nick's Deli"
@@ -88,7 +88,7 @@ export default function announcements({data}) {
         aspectRatio={172/39}
         width={200}
       /></a>
-      <a href='https://www.oneilnissan.com/' taget='_blank'>
+      <a taget='_blank' href='https://www.oneilnissan.com/'>
       <StaticImage
         src="../sponsors/Nissan.jpg"
         alt="Nissan"
@@ -97,7 +97,7 @@ export default function announcements({data}) {
         aspectRatio={118/73}
         width={200}
       /></a>
-      <a href='http://getparadigm.com/' taget='_blank'>
+      <a taget='_blank' href='http://getparadigm.com/'>
       <StaticImage
         src="../sponsors/Paradigm.jpg"
         alt="Paradigm"
@@ -106,7 +106,7 @@ export default function announcements({data}) {
         aspectRatio={1/1}
         width={200}
       /></a>
-      <a href='https://theaugustineteam.com/' taget='_blank'>
+      <a taget='_blank' href='https://theaugustineteam.com/'>
       <StaticImage
         src="../sponsors/TheAugustineGroup.jpg"
         alt="The Augustine Group"
@@ -115,7 +115,7 @@ export default function announcements({data}) {
         aspectRatio={114/180}
         width={200}
       /></a>
-      <a href='https://warminsterfootball.webs.com/' taget='_blank'>
+      <a taget='_blank' href='https://warminsterfootball.webs.com/'>
       <StaticImage
         src="../sponsors/WarminsterFlag.jpg"
         alt="Warminster Flag"
@@ -124,7 +124,7 @@ export default function announcements({data}) {
         aspectRatio={168/88}
         width={200}
       /></a>
-      <a href='https://warminsterfootball.webs.com/' taget='_blank'>
+      <a taget='_blank' href='https://warminsterfootball.webs.com/'>
       <StaticImage
         src="../sponsors/WarminsterPioneersFBandCheer.jpg"
         alt="Warminster PioneersFootball Band and Cheerleading"
@@ -133,7 +133,7 @@ export default function announcements({data}) {
         aspectRatio={140/172}
         width={200}
       /></a>
-      <a href='https://warminstertownship.org/police/' taget='_blank'>
+      <a taget='_blank' href='https://warminstertownship.org/police/'>
       <StaticImage
         src="../sponsors/WPDbenevolent.jpg"
         alt="WPD benevolent"
