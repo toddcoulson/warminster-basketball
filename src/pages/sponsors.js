@@ -1,15 +1,70 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { StaticImage } from "gatsby-plugin-image"
+//import { StaticImage } from "gatsby-plugin-image"
 import LayoutNoFooter from "../components/LayoutNoFooter"
 
-export default function announcements({data}) {
-  //const sponsors = data.allFile.nodes.filter((item)=>item.relativePath.includes('sponsors'))
-  //console.log(data.allFile.nodes, sponsors)
+export default function announcements({data}) { 
+  const sponsors = data.allFile.nodes.filter((item)=>item.relativePath.includes('sponsors'))
+  const sponsorLinks = [{path:'Nissan', link:'https://www.oneilnissan.com/'}, {path:'Paradigm', link:'http://getparadigm.com/'},
+  {path:'LegacyBuxmont', link:'https://www.legacybuxmontrealestate.com/'}, {path:'MikeBnG', link:'https://www.mikesyorkstreetbarandgrill.com/'},
+  {path:'WarminsterPioneers', link:'https://warminsterfootball.webs.com/'}, {path:'WarminsterFlag', link:'https://warminsterfootball.webs.com/'},
+  {path:'NicksDeli', link:'https://www.facebook.com/pages/category/Deli/Nicks-Deli-172974539485956/'}, {path:'JMLMachining', link:'https://www.facebook.com/pages/category/Machine-Shop/JML-Machine-260136757747047/'},
+  {path:'TheAugustineGroup', link:'https://theaugustineteam.com/'}, {path:'JohnsonSons', link:'https://www.facebook.com/pages/Johnson-M-Sons/158828084149523'},
+  {path:'JJAutoAndTruck', link:'https://www.facebook.com/jandjautoandtruckrepairs/'}, {path:'WPDbenevolent', link:'https://warminstertownship.org/police/'},
+  {path:'FTSFlooring', link:'http://www.ftsflooring.com/'}, {path:'BentonMechanical', link:'https://www.manta.com/c/mhbtr5c/benton-mechanical-solution-llc'}]
+  const getLink =(path)=>{
+    let saveLink = ''
+    sponsorLinks.forEach((v) => {
+      console.log('values: ',v.path);
+      if(path.includes(v.path)) saveLink = v.link;
+    })
+    console.log(saveLink)
+    return saveLink;
+  }
   return (<>
     <LayoutNoFooter>
-    <div className='sponsorGrid'>
+    <div>
+    
+    {sponsors.map((image, i) => {
+      return <a key={i} href={getLink(image.relativePath)} target='_blank'><GatsbyImage className='sponsorImg' image={getImage(image)} alt='' /></a>
+    })}
+    </div>
+    
+    </LayoutNoFooter>
+  </>)
+}
+
+export const query = graphql`
+query sponsorsPage {
+allFile {       
+  nodes {        
+    relativePath         
+    childImageSharp {         
+      gatsbyImageData(width: 130)
+    }
+   }
+  }
+}
+`
+
+/*export const query = graphql`
+query announcementsPage {
+  allFile {       
+    nodes {        
+      relativePath         
+      childImageSharp {         
+        fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+     }
+    }
+}
+`
+
+
+ <div className='sponsorGrid'>
       <a taget='_blank' href='https://www.manta.com/c/mhbtr5c/benton-mechanical-solution-llc'> 
         <StaticImage
             src="../sponsors/BentonMechanical.jpg"
@@ -142,26 +197,5 @@ export default function announcements({data}) {
         aspectRatio={132/190}
         width={200}
       /></a>
-      </div>
-    </LayoutNoFooter>
-  </>)
-}
-
-/*export const query = graphql`
-query announcementsPage {
-  allFile {       
-    nodes {        
-      relativePath         
-      childImageSharp {         
-        fluid(maxWidth: 500) {
-          ...GatsbyImageSharpFluid_noBase64
-        }
-      }
-     }
-    }
-}
-`
-
-
-      
+      </div>     
 */

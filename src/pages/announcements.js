@@ -4,11 +4,14 @@ import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 export default function announcements({data}) {
-  console.log(data, data.allMarkdownRemark.nodes[0].html)
+  let passHTML = '';
+  data.allMarkdownRemark.nodes.forEach(element => {
+    if(element.html.substring(0, 100).toLowerCase().includes('<h1>announcements')) passHTML = element.html
+  });
   return (<>
     <Layout>
       <div
-        dangerouslySetInnerHTML={{ __html: data.allMarkdownRemark.nodes[0].html }}
+        dangerouslySetInnerHTML={{ __html: passHTML }}
       />
     </Layout>
   </>)

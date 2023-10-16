@@ -6,6 +6,13 @@ import { StaticImage } from "gatsby-plugin-image"
 export default function Footer(){
 
   const [randSponsors, setRandSponsors] = useState([])
+  const checkRandom = (val)=>{
+    let flag = false;
+    randSponsors.forEach((elem)=>{
+      if(elem?.includes(val)) flag = true;
+    })
+    return flag;
+  }
   useEffect(()=>{
     let selected = [];
     const sponsorArray=['BentonMechanical.jpg', 'FTSFlooring.jpg',
@@ -16,24 +23,30 @@ export default function Footer(){
                       'TheAugustineGroup.jpg','WarminsterFlag.jpg',
                       'WarminsterPioneersFBandCheer.jpg','WPDbenevolent.jpg']
     for (let i = 0; i < 3; i++){
-      selected.push(sponsorArray.splice(Math.floor(Math.random() * sponsorArray.length), 1));
+      console.log(sponsorArray, sponsorArray.length)
+      let passArray = sponsorArray.splice(Math.floor(Math.random() * sponsorArray.length-1), 1);
+      selected.push(passArray[0]);
     }
+    
     setRandSponsors(selected)
   }, [])
   
   return (
+    <footer>
+    <p>Warminster Basketball Association</p>
     <Link activeClassName="active" to="/sponsors"> 
       <div className={styles.sponsor}>
-      
-        <StaticImage
-            src="../sponsors/BentonMechanical.jpg"
-            alt="Benton Mechanical"
-            placeholder="blurred"
-            layout="fixed"
-            aspectRatio={193/92}
-            width={75}
-          />
+      <StaticImage
+          style={checkRandom("BentonMechanical")? { display: 'inline-block' }:{display:'none'}}
+          src="../sponsors/BentonMechanical.jpg"
+          alt="Benton Mechanical"
+          placeholder="blurred"
+          layout="fixed"
+          aspectRatio={193/92}
+          width={75}
+        />
        <StaticImage
+          style={checkRandom("FTSFlooring")? { display: 'inline-block' }:{display:'none'}}
           src="../sponsors/FTSFlooring.jpg"
           alt="FTS Flooring"
           placeholder="blurred"
@@ -42,6 +55,7 @@ export default function Footer(){
           width={75}
         />
       <StaticImage
+          style={checkRandom("JJAutoAndTruck")? { display: 'inline-block' }:{display:'none'}}
           src="../sponsors/JJAutoAndTruck.jpg"
           alt="JJ Auto And Truck"
           placeholder="blurred"
@@ -50,6 +64,7 @@ export default function Footer(){
           width={75}
         />
       <StaticImage
+      style={checkRandom("JMLMachining")? { display: 'inline-block' }:{display:'none'}}
         src="../sponsors/JMLMachining.jpg"
         alt="JML Machining"
         placeholder="blurred"
@@ -58,6 +73,7 @@ export default function Footer(){
         width={75}
       />
       <StaticImage
+      style={checkRandom("JohnsonSons")? { display: 'inline-block' }:{display:'none'}}
         src="../sponsors/JohnsonSons.jpg"
         alt="Johnson Sons"
         placeholder="blurred"
@@ -66,6 +82,7 @@ export default function Footer(){
         width={75}
       />
       <StaticImage
+      style={checkRandom("LegacyBuxmont")? { display: 'inline-block' }:{display:'none'}}
         src="../sponsors/LegacyBuxmont.jpg"
         alt="Legacy Buxmont"
         placeholder="blurred"
@@ -74,6 +91,7 @@ export default function Footer(){
         width={75}
       />
       <StaticImage
+      style={checkRandom("MikesBnG")? { display: 'inline-block' }:{display:'none'}}
         src="../sponsors/MikesBnG.jpg"
         alt="Mikes Bar and Grill"
         placeholder="blurred"
@@ -82,6 +100,7 @@ export default function Footer(){
         width={75}
       />
       <StaticImage
+      style={checkRandom("NicksDeli")? { display: 'inline-block' }:{display:'none'}}
         src="../sponsors/NicksDeli.jpg"
         alt="Nick's Deli"
         placeholder="blurred"
@@ -90,6 +109,7 @@ export default function Footer(){
         width={75}
       />
       <StaticImage
+      style={checkRandom("Nissan")? { display: 'inline-block' }:{display:'none'}}
         src="../sponsors/Nissan.jpg"
         alt="Nissan"
         placeholder="blurred"
@@ -98,6 +118,7 @@ export default function Footer(){
         width={75}
       />
       <StaticImage
+      style={checkRandom("JohParadigmnsonSons")? { display: 'inline-block' }:{display:'none'}}
         src="../sponsors/Paradigm.jpg"
         alt="Paradigm"
         placeholder="blurred"
@@ -106,6 +127,7 @@ export default function Footer(){
         width={75}
       />
       <StaticImage
+      style={checkRandom("TheAugustineGroup")? { display: 'inline-block' }:{display:'none'}}
         src="../sponsors/TheAugustineGroup.jpg"
         alt="The Augustine Group"
         placeholder="blurred"
@@ -114,6 +136,7 @@ export default function Footer(){
         width={75}
       />
       <StaticImage
+      style={checkRandom("WarminsterFlag")? { display: 'inline-block' }:{display:'none'}}
         src="../sponsors/WarminsterFlag.jpg"
         alt="Warminster Flag"
         placeholder="blurred"
@@ -122,14 +145,16 @@ export default function Footer(){
         width={75}
       />
       <StaticImage
+      style={checkRandom("WarminsterPioneersFBandCheer")? { display: 'inline-block' }:{display:'none'}}
         src="../sponsors/WarminsterPioneersFBandCheer.jpg"
-        alt="Warminster PioneersFootball Band and Cheerleading"
+        alt="Warminster Pioneers Football Band and Cheerleading"
         placeholder="blurred"
         layout="fixed"
         aspectRatio={140/172}
         width={75}
       />
       <StaticImage
+      style={checkRandom("WPDbenevolent")? { display: 'inline-block' }:{display:'none'}}
         src="../sponsors/WPDbenevolent.jpg"
         alt="WPD benevolent"
         placeholder="blurred"
@@ -140,5 +165,6 @@ export default function Footer(){
         
       </div>
       </Link>
+      </footer>
   )
 };

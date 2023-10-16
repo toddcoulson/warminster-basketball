@@ -13,7 +13,6 @@ export default function Layout({children}){
       <div className='content'>
         {children}
       </div>
-      <footer><p>Warminster basketball</p></footer>
     </div>
     <Footer />
     </>

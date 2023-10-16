@@ -1,0 +1,36 @@
+#containAll{
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  justify-items: left;
+}
+#displayEvents{
+  margin: .5rem 0;
+  font-size: 1rem;
+  font-family: var(--ff-body);
+}
+.gameRow, .gameHeaderRow{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: .5rem;
+  justify-items: left;
+}
+.gameRow {
+  background-color:darkolivegreen;
+
+}
+.gameRow {
+  background-color: darkgreen;
+  border-bottom: 2px solid var(--clr-primary-500);
+}
+.gameRow:last-child {
+  border-bottom: 0;
+}
+
+.gameRow .gameCell, .gameHeaderRow .gameHeaderCell{
+  margin: .5rem;
+}
+
+.gameHeaderCell{
+  border-bottom: 2px solid var(--clr-primary-500);
+  font-size: 1.2rem;
+}
