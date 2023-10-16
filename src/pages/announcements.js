@@ -6,7 +6,8 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 export default function announcements({data}) {
   let passHTML = '';
   data.allMarkdownRemark.nodes.forEach(element => {
-    if(element.html.substring(0, 100).toLowerCase().includes('<h1>announcements')) passHTML = element.html
+    const testStr = element.html.split('</h1>')[0];
+    if(testStr.toLowerCase().includes('announcements')) passHTML = element.html
   });
   return (<>
     <Layout>

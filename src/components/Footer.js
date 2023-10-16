@@ -23,7 +23,7 @@ export default function Footer(){
                       'TheAugustineGroup.jpg','WarminsterFlag.jpg',
                       'WarminsterPioneersFBandCheer.jpg','WPDbenevolent.jpg']
     for (let i = 0; i < 3; i++){
-      console.log(sponsorArray, sponsorArray.length)
+      // console.log(sponsorArray, sponsorArray.length)
       let passArray = sponsorArray.splice(Math.floor(Math.random() * sponsorArray.length-1), 1);
       selected.push(passArray[0]);
     }

@@ -147,7 +147,7 @@ footer p{
   margin: 40px auto;
 }
 .content{
-  margin-top: 1rem;
+  margin: 1rem 0;
 }
 .hamburger{
   display: none;
@@ -215,6 +215,12 @@ footer p{
   max-height: 8rem;
   position: absolute !important;
 
+}
+a {
+  color: var(--clr-primary-500)
+}
+a:hover{
+  text-decoration: underline;
 }
 
 #dropContain{

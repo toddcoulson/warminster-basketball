@@ -5,7 +5,8 @@ import { graphql } from "gatsby"
 export default function Clearances({data}) {
   let passHTML = '';
   data.allMarkdownRemark.nodes.forEach(element => {
-    if(element.html.substring(0, 100).toLowerCase().includes('<h1>security clearances')) passHTML = element.html
+    const testStr = element.html.split('</h1>')[0];
+    if(testStr.toLowerCase().includes('security clearances')) passHTML = element.html
   });
   console.log("passhtml: ", passHTML)
   return <>

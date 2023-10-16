@@ -5,8 +5,8 @@ import { graphql } from "gatsby"
 export default function Registration({data}) {
   let passHTML = '';
   data.allMarkdownRemark.nodes.forEach(element => {
-    console.log(element)
-    if(element.html.substring(0, 100).toLowerCase().includes('registration')) passHTML = element.html
+    const testStr = element.html.split('</h1>')[0];
+    if(testStr.toLowerCase().includes('registration')) passHTML = element.html
   });
   return <>
   <Layout>
