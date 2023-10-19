@@ -73,14 +73,17 @@ export default function Information({data}) {
   </div>
   <div id={styles.displayEvents}>
   <div className={styles.gameHeaderRow} key='head'>
+  <div className="gameHeaderRow">
       <div className={styles.gameHeaderCell +' '+styles.dateTime}>Date Time</div>
       <div className={styles.gameHeaderCell +' '+styles.dateTimelocation}>Location/Score</div> 
         
       <div className={styles.gameHeaderCell +' '+styles.opponent}>Teams</div>
       <div className={styles.gameHeaderCell +' '+styles.details}>Details</div>
+      </div>
     </div>
   {events.map((event, i) => 
     <div className={styles.gameRow} key={i}>
+    <div className="gameRow">
       <div className={styles.gameCell +' '+styles.dateTime}>{formatDate(event.dateTime)}</div>
       {
         !checkPastGame(event)? 
@@ -89,6 +92,7 @@ export default function Information({data}) {
       }
       <div className={styles.gameCell +' '+styles.opponent}>{event.awayTeam} vs. {event.homeTeam}</div>
       <div className={styles.gameCell +' '+styles.details}>{event.details.details}</div>
+    </div>
     </div>
   )}
   </div>
